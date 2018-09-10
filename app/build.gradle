@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId 'com.apreciasoft.admin.asremis'
+        applicationId 'com.apreciasoft.admin.arraijan'
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
+        versionCode 12
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
@@ -23,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            debuggable true
+            debuggable false
         }
     }
     dexOptions
