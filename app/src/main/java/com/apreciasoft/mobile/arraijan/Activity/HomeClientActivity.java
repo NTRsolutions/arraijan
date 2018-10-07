@@ -2565,6 +2565,4 @@ public class HomeClientActivity extends AppCompatActivity
         FragmentManager fm = getFragmentManager();
         fm.beginTransaction().replace(R.id.content_frame_client,new ReservationsFrangment()).commit();
     }
-
-
 }
