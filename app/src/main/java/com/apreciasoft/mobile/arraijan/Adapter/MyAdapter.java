@@ -7,11 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.apreciasoft.mobile.arraijan.Activity.HomeActivity;
 import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
 import com.apreciasoft.mobile.arraijan.R;
-
 import java.util.List;
 
 /**

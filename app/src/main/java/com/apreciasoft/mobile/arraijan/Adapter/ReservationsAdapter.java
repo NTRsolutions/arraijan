@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
 import com.apreciasoft.mobile.arraijan.R;
 import java.util.List;
@@ -119,8 +118,8 @@ public class ReservationsAdapter
 
         if(mDataset.get(position).getNameOrigin() != null) {
             if (mDataset.get(position).getNameOrigin().length() > 0) {
-        holder.mtv_blah.setText(mDataset.get(position).getNameOrigin());
-       }
+                holder.mtv_blah.setText(mDataset.get(position).getNameOrigin());
+            }
         }
 
         holder.mtv_blah2.setText(mDataset.get(position).getNameDestination());

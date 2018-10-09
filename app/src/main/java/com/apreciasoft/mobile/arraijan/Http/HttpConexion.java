@@ -13,7 +13,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HttpConexion {
 
-
     public static String base;
     /*public static String ip = "192.168.0.14";*/public static String ip = "as-nube.com";
     public  static String instance = "developer";
@@ -21,8 +20,6 @@ public class HttpConexion {
     public static int portWsCliente = 3000;
     public  static  String PROTOCOL = "https";
     public  static  String COUNTRY = "ARG";
-
-
 
 
     public static final String BASE_URL = PROTOCOL+"://"+ip+"/";

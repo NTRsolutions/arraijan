@@ -1,14 +1,11 @@
 package com.apreciasoft.mobile.arraijan.Util;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-
 import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
-
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -18,7 +15,6 @@ import java.security.cert.X509Certificate;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -33,7 +29,7 @@ public class WsTravel{
     public static Socket mWebSocketClient;
     public static String URL_SOCKET;
     public static String MY_EVENT = "message";
-    private Context _context;
+    public Context _context;
 
     public GlovalVar gloval;
 
@@ -44,7 +40,7 @@ public class WsTravel{
     public  void connectWebSocket(int idUser) {
 
         try{
-            /* Instance object socket */
+        /* Instance object socket */
 
             WsTravel.URL_SOCKET =  HttpConexion.PROTOCOL+"://"+HttpConexion.ip+":"+HttpConexion.portWsCliente+"?idUser="+idUser+"&uri="+ HttpConexion.base;
 
@@ -66,16 +62,15 @@ public class WsTravel{
 
             }
 
-
             mWebSocketClient.on(Socket.EVENT_CONNECT, new Emitter.Listener(){
                 @Override
                 public void call(Object... args) {
-                    /* Our code */
+                /* Our code */
                     Log.d("SOCKET IO","CONECT");
 
 
                     // variable global //
-                    // gloval = ((GlovalVar) HomeClientActivity.gloval);
+                   // gloval = ((GlovalVar) HomeClientActivity.gloval);
 
                     //gloval.setLocationDriverFromClient("");
 
@@ -83,13 +78,13 @@ public class WsTravel{
             }).on(mWebSocketClient.EVENT_DISCONNECT, new Emitter.Listener(){
                 @Override
                 public void call(Object... args) {
-                    /* Our code */
+                /* Our code */
                     Log.d("SOCKET IO","DISCONESCT");
                 }
             }).on(Socket.EVENT_RECONNECT_ERROR, new Emitter.Listener(){
                 @Override
                 public void call(Object... args) {
-                    /* Our code */
+                        /* Our code */
                     Log.d("SOCK IO","EVENT_RECONNECT_ERROR");
 
 
@@ -97,7 +92,7 @@ public class WsTravel{
             }).on(MY_EVENT, new Emitter.Listener(){
                 @Override
                 public void call(Object... args) {
-                    /* Our code */
+                        /* Our code */
                     Log.d("SOCK IO","NOTIFICO");
 
 
@@ -108,9 +103,6 @@ public class WsTravel{
                 }
             });
 
-
-
-
             mWebSocketClient.connect();
 
         }catch (URISyntaxException e){
@@ -120,13 +112,11 @@ public class WsTravel{
         } catch (KeyManagementException e) {
             Log.d("SOCK IO",e.getMessage());
         }
-
-
     }
 
     private TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-            return new java.security.cert.X509Certificate[] {};
+        public X509Certificate[] getAcceptedIssuers() {
+            return new X509Certificate[] {};
         }
 
         public void checkClientTrusted(X509Certificate[] chain,
@@ -138,14 +128,10 @@ public class WsTravel{
         }
     } };
 
-
-
     public void coseWebSocket() {
         mWebSocketClient.disconnect();
         mWebSocketClient.close();
         mWebSocketClient = null;
         Log.d("SOCKET IO","closee");
     }
-
-
 }

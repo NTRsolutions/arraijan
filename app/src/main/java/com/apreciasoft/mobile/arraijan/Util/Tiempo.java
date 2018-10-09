@@ -2,9 +2,7 @@ package com.apreciasoft.mobile.arraijan.Util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
-
 import java.util.Timer;
 import java.util.TimerTask;
 

@@ -28,7 +28,7 @@ import com.apreciasoft.mobile.arraijan.Entity.login;
 import com.apreciasoft.mobile.arraijan.Entity.paramEntity;
 import com.apreciasoft.mobile.arraijan.Entity.user;
 import com.apreciasoft.mobile.arraijan.Entity.userFull;
-import com.apreciasoft.mobile.arraijan.Fracments.RegisterForm;
+import com.apreciasoft.mobile.arraijan.Fragments.RegisterForm;
 import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
 import com.apreciasoft.mobile.arraijan.R;
 import com.apreciasoft.mobile.arraijan.Services.ServicesLoguin;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "NOTICIAS";
     public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
     protected PowerManager.WakeLock wakelock;
-    public static String version = "2.0.16";
+    public static String version = "2.0.14";
     public ProgressDialog loading;
     ServicesLoguin apiService = null;
     public GlovalVar gloval = null;

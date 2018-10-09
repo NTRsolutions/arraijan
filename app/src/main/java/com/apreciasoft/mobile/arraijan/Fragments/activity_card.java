@@ -1,14 +1,12 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
 import com.apreciasoft.mobile.arraijan.R;
 import com.mercadopago.callbacks.Callback;
 import com.mercadopago.core.MercadoPago;
 import com.mercadopago.model.ApiException;
 import com.mercadopago.model.IdentificationType;
-
 import java.util.List;
 
 /**

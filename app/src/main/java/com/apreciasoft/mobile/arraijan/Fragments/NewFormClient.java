@@ -1,4 +1,4 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.apreciasoft.mobile.arraijan.Entity.ClientEntityAdd;
 import com.apreciasoft.mobile.arraijan.Entity.Company;
 import com.apreciasoft.mobile.arraijan.Entity.RequetClient;
@@ -32,10 +31,8 @@ import com.apreciasoft.mobile.arraijan.R;
 import com.apreciasoft.mobile.arraijan.Services.ServicesDriver;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import ernestoyaquello.com.verticalstepperform.VerticalStepperFormLayout;
 import ernestoyaquello.com.verticalstepperform.interfaces.VerticalStepperForm;
 import retrofit2.Call;

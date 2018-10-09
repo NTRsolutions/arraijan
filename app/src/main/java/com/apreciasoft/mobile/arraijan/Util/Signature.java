@@ -21,9 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import com.apreciasoft.mobile.arraijan.R;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -203,7 +201,7 @@ public class Signature extends AppCompatActivity {
             }
             try
             {
-            Canvas canvas = new Canvas(mBitmap);
+                Canvas canvas = new Canvas(mBitmap);
                 v.draw(canvas);
 
 
@@ -218,7 +216,7 @@ public class Signature extends AppCompatActivity {
 
 
 /*
-                FileOutputStream mFileOutStream = new FileOutputStream(mypath);
+               FileOutputStream mFileOutStream = new FileOutputStream(mypath);
 
                 v.draw(canvas);
                 mBitmap.compress(Bitmap.CompressFormat.PNG, 100, mFileOutStream);
@@ -247,7 +245,7 @@ public class Signature extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-        }
+            }
 
         }
 

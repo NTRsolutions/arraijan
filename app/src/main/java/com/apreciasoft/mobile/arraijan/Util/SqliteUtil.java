@@ -1,10 +1,9 @@
-package com.apreciasoft.mobile.asremis.Util;
+package com.apreciasoft.mobile.arraijan.Util;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.apreciasoft.mobile.asremis.Entity.TravelSqliteEntity;
+import com.apreciasoft.mobile.arraijan.Entity.TravelSqliteEntity;
 
 public class SqliteUtil extends SQLiteOpenHelper {
     //Se declaran e inicializan las variables encargadas de almacenar las consultas para crear la tabla 'Ventas',

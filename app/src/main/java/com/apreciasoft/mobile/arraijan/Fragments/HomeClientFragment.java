@@ -1,93 +1,90 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
-        import android.Manifest;
-        import android.app.Activity;
-        import android.app.Fragment;
-        import android.content.BroadcastReceiver;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.content.IntentFilter;
-        import android.content.pm.PackageManager;
-        import android.graphics.Bitmap;
-        import android.graphics.BitmapFactory;
-        import android.graphics.Color;
-        import android.graphics.drawable.BitmapDrawable;
-        import android.location.Geocoder;
-        import android.location.Location;
-        import android.os.AsyncTask;
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.os.Handler;
-        import android.support.annotation.Nullable;
-        import android.support.annotation.RequiresApi;
-        import android.support.design.widget.Snackbar;
-        import android.support.v4.app.ActivityCompat;
-        import android.support.v4.content.ContextCompat;
-        import android.support.v4.content.LocalBroadcastManager;
-        import android.util.Log;
-        import android.view.InflateException;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.Button;
-        import android.widget.ImageView;
-        import android.widget.ProgressBar;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
-        import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
-        import com.apreciasoft.mobile.arraijan.Entity.TravelLocationEntity;
-        import com.apreciasoft.mobile.arraijan.Entity.reason;
-        import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
-        import com.apreciasoft.mobile.arraijan.R;
-        import com.apreciasoft.mobile.arraijan.Services.ServicesTravel;
-        import com.apreciasoft.mobile.arraijan.Util.CallbackActivity;
-        import com.apreciasoft.mobile.arraijan.Util.DataParser;
-        import com.apreciasoft.mobile.arraijan.Util.GlovalVar;
-        import com.google.android.gms.common.ConnectionResult;
-        import com.google.android.gms.common.api.GoogleApiClient;
-        import com.google.android.gms.location.LocationListener;
-        import com.google.android.gms.location.LocationRequest;
-        import com.google.android.gms.location.LocationServices;
-        import com.google.android.gms.maps.CameraUpdateFactory;
-        import com.google.android.gms.maps.GoogleMap;
-        import com.google.android.gms.maps.MapFragment;
-        import com.google.android.gms.maps.OnMapReadyCallback;
-        import com.google.android.gms.maps.model.BitmapDescriptor;
-        import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-        import com.google.android.gms.maps.model.LatLng;
-        import com.google.android.gms.maps.model.Marker;
-        import com.google.android.gms.maps.model.MarkerOptions;
-        import com.google.android.gms.maps.model.PolylineOptions;
-        import com.google.gson.Gson;
-        import com.google.gson.GsonBuilder;
-        import com.kofigyan.stateprogressbar.StateProgressBar;
-        import org.json.JSONObject;
-        import java.io.BufferedReader;
-        import java.io.IOException;
-        import java.io.InputStream;
-        import java.io.InputStreamReader;
-        import java.net.HttpURLConnection;
-        import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.List;
-        import java.util.Timer;
-        import java.util.TimerTask;
-
-        import retrofit2.Call;
-        import retrofit2.Callback;
-        import retrofit2.Response;
-
-        import static com.apreciasoft.mobile.arraijan.Activity.HomeClientActivity.currentTravel;
-        import static com.apreciasoft.mobile.arraijan.Activity.HomeClientActivity.gloval;
+import android.Manifest;
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.location.Geocoder;
+import android.location.Location;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
+import android.view.InflateException;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
+import com.apreciasoft.mobile.arraijan.Entity.TravelLocationEntity;
+import com.apreciasoft.mobile.arraijan.Entity.reason;
+import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
+import com.apreciasoft.mobile.arraijan.R;
+import com.apreciasoft.mobile.arraijan.Services.ServicesTravel;
+import com.apreciasoft.mobile.arraijan.Util.CallbackActivity;
+import com.apreciasoft.mobile.arraijan.Util.DataParser;
+import com.apreciasoft.mobile.arraijan.Util.GlovalVar;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.kofigyan.stateprogressbar.StateProgressBar;
+import org.json.JSONObject;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import static com.apreciasoft.mobile.arraijan.Activity.HomeClientActivity.currentTravel;
+import static com.apreciasoft.mobile.arraijan.Activity.HomeClientActivity.gloval;
 
 
 /**
  * Created by Admin on 04/01/2017.
  */
 
-public class HomeClientFragment extends Fragment implements  OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,LocationListener {
+public class HomeClientFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,LocationListener {
 
     static GoogleMap mGoogleMap;
     LocationRequest mLocationRequest;
@@ -165,7 +162,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
         MapFragment fr = (MapFragment)getChildFragmentManager().findFragmentById(R.id.gmap);
 
         if(fr == null) {
-            MapFragment  mMap = ((MapFragment) this.getFragmentManager().findFragmentById(R.id.gmap));
+            MapFragment mMap = ((MapFragment) this.getFragmentManager().findFragmentById(R.id.gmap));
             mMap.getMapAsync(this);
 
 
@@ -199,7 +196,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
 
 
-            setVisibleprogressTravel(false);
+        setVisibleprogressTravel(false);
 
 
 
@@ -216,7 +213,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
                     iCallback.doSomething();
                 } catch (Exception e) {
                     e.printStackTrace();
-    }
+                }
 
 
             }
@@ -268,20 +265,20 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
 
 
-        HomeClientFragment.txt_client_info.setText("No se cargo informacion");
-        HomeClientFragment.txt_calling_info.setText("No se cargo informacion");
-        HomeClientFragment.txt_domain.setText("No se cargo informacion");
-        HomeClientFragment.txt_destination_info.setText("No se cargo informacion");
-        HomeClientFragment.txt_origin_info.setText("No se cargo informacion");
-        HomeClientFragment.txt_km_info.setText("0.0Km");
-        HomeClientFragment.txt_amount_info.setText("0.0$");
-        HomeClientFragment.txt_date_info.setText("--/--/----");
-        getPick(-1);
+           HomeClientFragment.txt_client_info.setText("No se cargo informacion");
+            HomeClientFragment.txt_calling_info.setText("No se cargo informacion");
+            HomeClientFragment.txt_domain.setText("No se cargo informacion");
+            HomeClientFragment.txt_destination_info.setText("No se cargo informacion");
+            HomeClientFragment.txt_origin_info.setText("No se cargo informacion");
+            HomeClientFragment.txt_km_info.setText("0.0Km");
+            HomeClientFragment.txt_amount_info.setText("0.0$");
+            HomeClientFragment.txt_date_info.setText("--/--/----");
+            getPick(-1);
 
-        HomeClientFragment.txtStatus.setVisibility(View.INVISIBLE);
-        btnCnacel.setVisibility(View.INVISIBLE);
+            HomeClientFragment.txtStatus.setVisibility(View.INVISIBLE);
+            btnCnacel.setVisibility(View.INVISIBLE);
 
-        setVisibleprogressTravel(false);
+            setVisibleprogressTravel(false);
 
         }catch (Exception E){
            Log.d("ERRO",E.getMessage());
@@ -316,7 +313,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
 
                 if (currentTravel.getIdSatatusTravel() == 4 || currentTravel.getIdSatatusTravel() == 5 ) {
-                getPick(currentTravel.getIdUserDriver());// PASAMOS EL ID DE EL USUARIO DE EL CHOFER
+                    getPick(currentTravel.getIdUserDriver());// PASAMOS EL ID DE EL USUARIO DE EL CHOFER
                 }
 
                 HomeClientFragment.txtStatus.setTextColor(Color.parseColor(currentTravel.getClassColorTwo()));
@@ -328,7 +325,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
                 }
 
-                if (currentTravel.getIdSatatusTravel() == 6) {
+                    if (currentTravel.getIdSatatusTravel() == 6) {
                     if (currentTravel.getAmountCalculate() != null) {
                         HomeClientFragment.txt_amount_info.setText(currentTravel.getTotalAmount() + "$");
                     }
@@ -484,7 +481,7 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
 
         //Initialize Google Play Services
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 
 
@@ -1098,34 +1095,34 @@ public class HomeClientFragment extends Fragment implements  OnMapReadyCallback,
 
             if(currentTravel != null) {
 
-            Call<TravelLocationEntity> call = null;
-            call = this.daoTravel.getDriverMapBiIdTravel(currentTravel.getIdTravel());
+                Call<TravelLocationEntity> call = null;
+                call = this.daoTravel.getDriverMapBiIdTravel(currentTravel.getIdTravel());
 
 
-            call.enqueue(new Callback<TravelLocationEntity>() {
-                @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-                @Override
-                public void onResponse(Call<TravelLocationEntity> call, Response<TravelLocationEntity> response) {
+                call.enqueue(new Callback<TravelLocationEntity>() {
+                    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+                    @Override
+                    public void onResponse(Call<TravelLocationEntity> call, Response<TravelLocationEntity> response) {
 
 
-                    TravelLocationEntity TRAVEL = (TravelLocationEntity) response.body();
+                        TravelLocationEntity TRAVEL = (TravelLocationEntity) response.body();
 
-                    GsonBuilder builder = new GsonBuilder();
-                    Gson gson = builder.create();
+                        GsonBuilder builder = new GsonBuilder();
+                        Gson gson = builder.create();
 
-                    gloval.setLocationDriverFromClient(TRAVEL);
-                    addDriverMap();
+                        gloval.setLocationDriverFromClient(TRAVEL);
+                        addDriverMap();
 
 
-                }
+                    }
 
-                public void onFailure(Call<TravelLocationEntity> call, Throwable t) {
-                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                    public void onFailure(Call<TravelLocationEntity> call, Throwable t) {
+                        Snackbar.make(getActivity().findViewById(android.R.id.content),
                                 "ERROR (" + t.getMessage() + ")", Snackbar.LENGTH_LONG).show();
-                }
+                    }
 
 
-            });
+                });
             }
 
         } finally {

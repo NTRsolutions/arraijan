@@ -1,4 +1,4 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

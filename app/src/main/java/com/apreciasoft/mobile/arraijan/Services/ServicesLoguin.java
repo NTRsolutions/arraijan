@@ -7,7 +7,6 @@ import com.apreciasoft.mobile.arraijan.Entity.login;
 import com.apreciasoft.mobile.arraijan.Entity.reporte;
 import com.apreciasoft.mobile.arraijan.Entity.token;
 import com.apreciasoft.mobile.arraijan.Entity.userFull;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

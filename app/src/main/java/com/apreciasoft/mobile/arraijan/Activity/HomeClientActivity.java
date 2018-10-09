@@ -1,4 +1,5 @@
 package com.apreciasoft.mobile.arraijan.Activity;
+
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.FragmentManager;
@@ -55,7 +56,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
 import com.apreciasoft.mobile.arraijan.Entity.DestinationEntity;
 import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
 import com.apreciasoft.mobile.arraijan.Entity.OriginEntity;
@@ -69,13 +69,13 @@ import com.apreciasoft.mobile.arraijan.Entity.resp;
 import com.apreciasoft.mobile.arraijan.Entity.token;
 import com.apreciasoft.mobile.arraijan.Entity.tokenFull;
 import com.apreciasoft.mobile.arraijan.Entity.valuesTravelPreview;
-import com.apreciasoft.mobile.arraijan.Fracments.HistoryTravelDriver;
-import com.apreciasoft.mobile.arraijan.Fracments.HomeClientFragment;
-import com.apreciasoft.mobile.arraijan.Fracments.ListTypeCarLayout;
-import com.apreciasoft.mobile.arraijan.Fracments.NotificationsFrangment;
-import com.apreciasoft.mobile.arraijan.Fracments.PaymentFormClient;
-import com.apreciasoft.mobile.arraijan.Fracments.ProfileClientFr;
-import com.apreciasoft.mobile.arraijan.Fracments.ReservationsFrangment;
+import com.apreciasoft.mobile.arraijan.Fragments.HistoryTravelDriver;
+import com.apreciasoft.mobile.arraijan.Fragments.HomeClientFragment;
+import com.apreciasoft.mobile.arraijan.Fragments.ListTypeCarLayout;
+import com.apreciasoft.mobile.arraijan.Fragments.NotificationsFrangment;
+import com.apreciasoft.mobile.arraijan.Fragments.PaymentFormClient;
+import com.apreciasoft.mobile.arraijan.Fragments.ProfileClientFr;
+import com.apreciasoft.mobile.arraijan.Fragments.ReservationsFrangment;
 import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
 import com.apreciasoft.mobile.arraijan.R;
 import com.apreciasoft.mobile.arraijan.Services.ServicesLoguin;
@@ -95,11 +95,9 @@ import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -113,7 +111,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.fabric.sdk.android.Fabric;
 import retrofit2.Call;
@@ -2549,6 +2546,8 @@ public class HomeClientActivity extends AppCompatActivity
 
     }
 
+
+
     //Notificacioens
     public void fn_gotonotification()
     {
@@ -2565,4 +2564,6 @@ public class HomeClientActivity extends AppCompatActivity
         FragmentManager fm = getFragmentManager();
         fm.beginTransaction().replace(R.id.content_frame_client,new ReservationsFrangment()).commit();
     }
+
+
 }

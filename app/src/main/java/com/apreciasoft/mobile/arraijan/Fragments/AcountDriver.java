@@ -1,4 +1,4 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
 import android.app.Fragment;
 import android.content.DialogInterface;
@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.apreciasoft.mobile.arraijan.Adapter.AdapterRows;
 import com.apreciasoft.mobile.arraijan.Entity.DriverCurrentAcountEntity;
 import com.apreciasoft.mobile.arraijan.Entity.LiquidationEntity;
@@ -21,10 +20,8 @@ import com.apreciasoft.mobile.arraijan.Http.HttpConexion;
 import com.apreciasoft.mobile.arraijan.R;
 import com.apreciasoft.mobile.arraijan.Services.ServicesDriver;
 import com.apreciasoft.mobile.arraijan.Util.GlovalVar;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,4 +1,4 @@
-package com.apreciasoft.mobile.arraijan.Fracments;
+package com.apreciasoft.mobile.arraijan.Fragments;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import com.apreciasoft.mobile.arraijan.Entity.DriverFull;
 import com.apreciasoft.mobile.arraijan.Entity.driver;
 import com.apreciasoft.mobile.arraijan.Http.HttpConexion;

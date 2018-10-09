@@ -43,13 +43,13 @@
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.PaymentCreditCar" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.activity_card" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.RegisterCliente" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.RegisterForm" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.NewFormDriver" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.NewFormClient" />
-        <activity android:name="com.apreciasoft.mobile.arraijan.Fracments.InfoDetailTravelAc" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.PaymentCreditCar" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.activity_card" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.RegisterCliente" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.RegisterForm" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.NewFormDriver" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.NewFormClient" />
+        <activity android:name="com.apreciasoft.mobile.arraijan.Fragments.InfoDetailTravelAc" />
         <activity android:name="com.apreciasoft.mobile.arraijan.Util.Signature" />
 
         <service android:name="com.apreciasoft.mobile.arraijan.Util.FirebaseNotifactionSevices">

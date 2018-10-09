@@ -1,10 +1,9 @@
 package com.apreciasoft.mobile.arraijan.Util;
 
-import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
-
 import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntity;
 import com.apreciasoft.mobile.arraijan.Entity.InfoTravelEntityLite;
 import com.apreciasoft.mobile.arraijan.Entity.TravelLocationEntity;
@@ -20,7 +19,7 @@ import java.util.List;
  * Created by Admin on 02-01-2017.
  */
 
- public class GlovalVar extends Application {
+ public class GlovalVar extends MultiDexApplication {
 
     private String gv_base_intance = HttpConexion.instance;
     private String gv_user_name;
